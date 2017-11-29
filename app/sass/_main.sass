@@ -26,6 +26,9 @@ html,body
     @extend .fw-bg-color-blue
     border: 1px Solid $colorWhite
 
+.fw-cursor-pointer
+  cursor: pointer
+
 .checkbox__detector
   display: inline-block
   vertical-align: middle
@@ -75,6 +78,13 @@ input:checked + .checkbox__detector
   padding: 5px
   +placeholder
     color: #fff
+    opacity: 1
+
+.fw-popup-close
+  @extend .fw-bg-color-gray
+  &:hover
+    @extend .fw-bg-color-orange
+    cursor: pointer
 
 .container-popup
   margin-left: auto
