@@ -1,0 +1,10 @@
+@import "mixins/mixins"
+@import "mixins/retina_sprites"
+
+.icon
+  display: inline-block
+  vertical-align: middle
+
+@each $icon in fb, logo, vk, instagram, case, chart, find, rocket, web, left-arrow, right-arrow, map, mail, phone, check, uncheck
+  .icon-#{$icon}
+    +sprite(icon-#{$icon})

@@ -1,0 +1,31 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Title{% endblock %}
+
+{% block content %}
+    <div class="fw-flex content-block">
+        {% include "layouts/left-menu.twig" %}
+        <div class="project-page-screen fw-width-1-1 fw-color-white fw-text-center">
+            <div class="container fw-text-left fw-mt-60">
+                {% include "layouts/header.twig" %}
+                <ul class="ul-breadcrumbs fw-pl-15 fw-flex fw-list-style-none fw-fz-14 fw-mb-30">
+                    <li>Проекты</li>
+                    <li class="fw-ml-25">RedBull</li>
+                </ul>
+                <div class="project-info fw-text-center">
+                    <div class="fw-fz-0 fw-max-width-350 fw-margin-auto">
+                        <img src="/images/sections/page/redbull.png" class="fw-width-1-1"/>
+                    </div>
+                    <div class="fw-mt-30 fw-fz-16 ">
+                        Red Bull произошёл от энергетического напитка из Таиланда
+                        (Red Bull — это дословный перевод с тайского Krating Daeng). Дитрих Матешиц, австрийский предприниматель,
+                        основал бренд the Red Bull Energy Drink. Матешиц был директором по международному маркетингу компании Blendax,
+                        когда он посетил Таиланд в 1982 и обнаружил, что Krating Daeng помог вылечить джетлаг (синдром смены часового
+                        пояса).[2] C 1984 по 1987 Матешиц работал с TC Pharmaceutical (лицензиат Blendax), чтобы адаптировать Krating
+                        Daeng для европейского рынка.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

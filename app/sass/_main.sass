@@ -1,0 +1,400 @@
+@import "mixins/mixins"
+
+body
+  @extend .fw-reset
+  @extend .fw-font-myriad
+  font-size: 12px
+  font-weight: normal
+  line-height: 1.5
+
+html,body
+  -webkit-overflow-scrolling : touch !important
+  overflow: auto !important
+  height: 100% !important
+
+*
+  box-sizing: border-box
+
+.button-orange
+  @extend .fw-bg-color-orange
+  @extend .fw-text-decoration-none
+  @extend .fw-color-white
+  &:hover
+    cursor: pointer
+    @extend .fw-bg-color-blue
+    border: 1px Solid $colorWhite
+
+.checkbox__detector
+  display: inline-block
+  vertical-align: middle
+  border: 1px solid #CCCCCC
+  height: 18px
+  width: 18px
+  box-sizing: border-box
+  background-color: #fff
+  position: relative
+  border-radius: 3px
+  cursor: pointer
+
+  &:after
+    display: block
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) rotate(-45deg)
+    width: 8px
+    height: 4px
+    border-bottom: 3px solid #fff
+    border-left: 3px solid #fff
+    margin-top: -2px
+    opacity: 0
+
+input:checked + .checkbox__detector
+  background-color: #2F9935
+  border-color: #2F9935
+
+  &:after
+    opacity: 1
+
+
+.container
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
+
+.input-white
+  border: none
+  background: transparent
+  color: white
+  border-bottom: 1px Solid white
+  text-align: center
+  padding: 5px
+  +placeholder
+    color: #fff
+
+.container-popup
+  margin-left: auto
+  margin-right: auto
+
+.collapse_menu .collapse_menu--icon, .vertical_nav
+  transition: all .3s ease-out
+
+.vertical_nav
+  position: absolute
+  left: -265px
+  top: 50px
+  bottom: 0
+  width: 265px
+  background: #fff
+  z-index: 1
+
+.item-block-child
+  display: none
+  top: 0
+  transition: all .3s ease-out
+
+.item-block
+  padding-top: 50px
+  transition: all .3s ease-out
+
+  &:hover .item-block-child
+    display: block
+    transition: all .3s ease-out
+
+.vertical_nav__closed
+  left: -265px !important
+
+.vertical_nav__opened
+  left: 0 !important
+
+.home-screen
+  display: flex
+  justify-content: center
+
+.home-screen, .service-screen, .project-screen, .project-page-screen, .contact-screen
+  height: 100%
+  position: fixed
+  overflow-y: auto
+
+.home-screen, .service-screen, .project-screen, .contact-screen
+  background: url('/images/backgrounds/home.png') no-repeat center top / cover
+  background-attachment: fixed
+  width: 100%
+
+.service-screen, .project-screen
+  background: url('/images/backgrounds/service.png') no-repeat center top / cover
+  display: flex
+  justify-content: center
+  background-attachment: fixed
+
+.project-screen
+  background: url('/images/backgrounds/project.png') no-repeat center top / cover
+  background-attachment: fixed
+
+.contact-screen
+  background: url('/images/backgrounds/contacts.png') no-repeat center top / cover
+  background-attachment: fixed
+
+.service-item
+  text-align: center
+
+.map-block
+  top: 0
+  right: 0
+  position: relative
+  height: 400px
+  margin-bottom: 40px
+
+.project-page-screen
+  background: url('/images/backgrounds/project-page.png') no-repeat center top / cover
+  background-attachment: fixed
+
+.shadow
+  box-shadow: 3px 0px 10px -3px black
+
+.down-arrow, .up-arrow
+  &::after
+    border: 5px solid transparent
+    border-left: 5px solid $colorBlack
+    content: ""
+    position: absolute
+    top: 18px
+    margin-left: 15px
+    transform: rotate(90deg)
+
+.toggle--active
+  .down-arrow
+    &::after
+      transform: rotate(-90deg)
+      top: 13px
+
+.project-info
+  width: 100%
+  padding-right: 0
+
+.list-page
+  @extend .fw-bg-color-black
+  &:hover
+    @extend .fw-bg-color-orange
+    cursor: pointer
+
+.toggle_menu
+  height: 50px
+  line-height: 50px
+  padding: 0
+  text-align: center
+  cursor: pointer
+
+.toggle_menu i
+  display: block
+  font-size: 80px
+
+.menu--item
+  position: relative
+  min-height: 40px
+  line-height: 40px
+
+.menu
+  position: relative
+  margin-top: 100px
+  bottom: 40px
+  overflow-y: auto
+  width: 100%
+  padding: 0
+  list-style-type: none
+
+.ul-breadcrumbs
+  li
+    @extend .fw-relative
+
+    &::before
+      border: 4px solid transparent
+      border-left: 4px solid $colorOrange
+      content: ""
+      position: absolute
+      top: 7px
+      margin-left: -15px
+
+.menu--label
+  display: block
+  height: 40px
+  line-height: 40px
+  padding-left: 110px
+  &::before
+    border: 4px solid transparent
+    border-left: 4px solid $colorBlack
+    content: ""
+    position: absolute
+    top: 16px
+    margin-left: -15px
+
+.menu--label:hover
+  &::before
+    border-left: 4px solid $colorOrange
+
+.menu--link
+  display: block
+  overflow: hidden
+  font-size: .875rem
+  text-decoration: none
+  color: $colorBlack
+  font-weight: 400
+  white-space: nowrap
+  cursor: pointer
+
+.list-block
+  @extend .fw-width-1-1
+  display: flex
+  margin-top: 10px
+
+.header
+  background: #fff
+  z-index: 1
+
+.content-block
+  height: auto
+
+.menu--link:hover, .menu--link:hover .menu--label
+  color: #000
+  background: #fff
+
+@media (max-width: 450px)
+  .project-item
+    text-align: center
+
+@media (min-width: 1150px)
+  .list-block
+    display: inline-block
+    width: 38px
+    margin-left: 50px
+    margin-top: 5px
+
+@media (min-width: 992px)
+  .map-block
+    position: absolute
+    height: 100%
+    width: calc(100% - 700px)
+
+  .content-block
+    height: 100%
+
+  .project-info
+    width: 100%
+    padding-right: 70px
+
+  .header
+    background: none
+
+  .vertical_nav
+    left: 0
+    top: 0px
+
+  .toggle_menu
+    display: none
+
+  .vertical_nav__minify
+    width: 50px
+
+  .vertical_nav__minify .menu
+    overflow: visible
+
+  .vertical_nav__minify .menu--label
+    display: none
+    position: absolute
+    top: 0
+    left: 50px
+    width: 150px
+    padding-left: 16px
+    padding-right: 16px
+    background: #e9e9e9
+    font-weight: 500
+
+  .vertical_nav__minify .menu--item__has_sub_menu .menu--link:after
+    content: ""
+
+  .vertical_nav__minify .menu--subitens__opened .menu--label, .vertical_nav__minify .menu--subitens__opened .sub_menu
+    display: block
+
+  .vertical_nav__minify .sub_menu
+    position: absolute
+    top: 40px
+    left: 50px
+    width: 150px
+    background: #e9e9e9
+
+  .vertical_nav__minify .sub_menu--link
+    padding-left: 16px
+
+  .collapse_menu
+    position: absolute
+    bottom: 0
+    display: block
+
+  .container
+    margin-left: 265px
+    margin-right: auto
+    padding-left: 90px
+    padding-right: 15px
+
+  .home-screen, .service-screen, .project-screen, .project-page-screen, .contact-screen
+    background-position-x: 265px
+    height: 100%
+    position: fixed
+    overflow-y: auto
+
+  .contact-screen
+    overflow: hidden
+    align-items: center
+
+
+  .service-screen, .project-screen
+    align-items: center
+    display: flex
+
+  .service-item
+    text-align: inherit
+
+  .container-popup
+    margin-left: auto
+    margin-right: auto
+    padding-left: 15px
+    padding-right: 15px
+
+
+.fw-vertical-top
+  vertical-align: top
+
+#burger-container
+  width: 25px
+  z-index: 9999
+  margin: auto
+  right: 0
+  left: 0
+
+#burger
+  cursor: pointer
+  display: block
+
+#burger span
+  background: $colorBlack
+  display: block
+  width: 25px
+  height: 2px
+  margin-bottom: 5px
+  position: relative
+  top: 0
+  transition: all ease-in-out 0.4s
+
+#burger-container.open span:nth-child(2)
+  width: 0
+  opacity: 0
+
+#burger-container.open span:nth-child(1)
+  transform: rotate(-45deg)
+  top: 9px
+
+#burger-container.open span:nth-child(3)
+  transform: rotate(45deg)
+  top: -5px

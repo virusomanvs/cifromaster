@@ -1,0 +1,39 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Title{% endblock %}
+
+{% block content %}
+    <div class="fw-flex fw-height-1-1">
+        {% include "layouts/left-menu.twig" %}
+        <div class="contact-screen fw-flex fw-color-white fw-text-center">
+            <div class="container fw-text-left fw-mt-60">
+                {% include "layouts/header.twig" %}
+                <ul class="ul-breadcrumbs fw-pl-15 fw-flex fw-list-style-none fw-fz-14 fw-mb-30">
+                    <li>Контакты</li>
+                </ul>
+                <div class="fw-flex fw-flex-middle">
+                    <div class="fw-text-left fw-mb-40">
+                        <ul class="fw-list-style-none fw-pl-20 fw-pt-50 fw-pb-50 fw-line-height-50 fw-border-style-solid-left fw-border-width-5 fw-border-color-orange">
+                            <li class="fw-fz-16">
+                                <i class="icon icon-map"></i>
+                                <span class="fw-ml-30">пр. Достык, 91/2, офис 301</span>
+                            </li>
+                            <li class="fw-fz-16 fw-mt-60">
+                                <i class="icon icon-phone"></i>
+                                <span class="fw-ml-30">+7 (777) 721 55 44</span>
+                            </li>
+                            <li class="fw-fz-16 fw-mt-60">
+                                <i class="icon icon-mail"></i>
+                                <span class="fw-ml-30">info@cifromaster.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map-block">
+                    <iframe src="https://yandex.kz/map-widget/v1/-/CBavZBwrPD" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{
+  "name": "gulp_project",
+  "version": "0.1.15",
+  "description": "Gulp project builder",
+  "author": "qube.kz",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "owl.carousel": "^2.2.1",
+    "jquery.counterup": "^2.1.0",
+    "ion.rangeSlider": "ionrangeslider#^2.2.0",
+    "vertical-responsive-menu": "^1.0.2"
+  }
+}
