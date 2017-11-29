@@ -3003,6 +3003,9 @@ html, body {
   box-sizing: border-box;
 }
 
+.button-orange {
+  border: 1px Solid transparent;
+}
 .button-orange:hover {
   cursor: pointer;
   border: 1px Solid #fff;
@@ -3091,6 +3094,7 @@ input:checked + .checkbox__detector:after {
   width: 265px;
   background: #fff;
   z-index: 1;
+  padding-top: 10px;
 }
 
 .item-block-child {
@@ -3333,7 +3337,7 @@ input:checked + .checkbox__detector:after {
 
   .vertical_nav {
     left: 0;
-    top: 0px;
+    padding-top: 0px;
   }
 
   .toggle_menu {
