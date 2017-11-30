@@ -225,7 +225,5 @@ var YOURAPPNAME = function () {
         app.popups();
         app.check_trigger();
         app.toggletrigger();
-        app.owlsoc();
-        app.scrollTo();
     });
 })();

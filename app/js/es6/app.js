@@ -195,6 +195,20 @@ class YOURAPPNAME {
 
 }
 
+"use strict";
+var tid = setInterval(function() {
+    if ("complete" === document.readyState) {
+        clearInterval(tid);
+        var a = document.querySelector.bind(document),
+            b = document.querySelector(".vertical_nav"),
+            d = document.getElementById("js-menu");
+        a(".toggle_menu").onclick = function() {
+            b.classList.toggle("vertical_nav__opened")
+        };
+
+    }
+}, 100);
+
 (function () {
 
     const app = new YOURAPPNAME(document);
@@ -214,7 +228,5 @@ class YOURAPPNAME {
         app.popups();
         app.check_trigger();
         app.toggletrigger();
-        app.owlsoc();
-        app.scrollTo();
     });
 })();
